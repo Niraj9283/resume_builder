@@ -1,0 +1,18 @@
+{
+  "name": "ai-resume-builder",
+  "private": true,
+  "version": "1.0.0",
+  "description": "Full stack AI resume builder built with React, Express, PostgreSQL, Gemini AI, and ImageKit-ready uploads.",
+  "type": "module",
+  "scripts": {
+    "dev": "concurrently \"node server/src/server.js\" \"cd client && node node_modules/vite/bin/vite.js --host 0.0.0.0 --port 5173\"",
+    "client": "cd client && node node_modules/vite/bin/vite.js --host 0.0.0.0 --port 5173",
+    "server": "node server/src/server.js",
+    "build": "npm --prefix client run build",
+    "start": "node server/src/server.js",
+    "install-all": "npm install && npm --prefix client install && npm --prefix server install"
+  },
+  "devDependencies": {
+    "concurrently": "^9.2.1"
+  }
+}
